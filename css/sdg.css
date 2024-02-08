@@ -1,0 +1,136 @@
+body {
+	padding: 0;
+  margin: 0;
+  background: var(--background);
+  font-family: 'Montserrat', sans-serif;
+  transition: ease-in-out 1s;
+}
+.dark-mode {
+	--text-color: #fff;
+	--text-color-hover: rgb(161, 255, 161);
+	--background: #2C3639;
+}
+.navbar {
+	margin: 0 2rem;
+}
+.nav-link, .navbar-brand {
+  color: var(--text-color);
+  cursor: pointer;
+	
+}
+.navbar-brand img {
+	height: 50px;
+}
+.nav-link {
+  margin: 0 1em !important;
+}
+.nav-link:hover {
+  color: var(--text-color-hover);
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+.nav-links ul li::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #ff3446;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+	width: 70%;
+}
+.dropdown-item {
+	text-overflow: ellipsis;
+	overflow: hidden; 
+	max-width: 20em; 
+	white-space: nowrap;
+}
+#icon {
+	width: 30px;
+	cursor: pointer;
+}
+.card-book {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin-top: 2rem;
+  background: rgb(222, 250, 223);
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  transition: 2.5s;
+  border-radius: 1rem;
+}
+.card-book:hover {
+  z-index: 1;
+  transform: perspective(2000px) rotate(-1deg) translateX(15%);
+  cursor: pointer;
+}
+.box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  box-sizing: border-box;
+  position: relative;
+  transform-origin: left;
+  z-index: 1;
+  transition: 1s cubic-bezier(.15,1.7,.84,.58);
+  border-radius: 1rem;
+}
+.box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.box h3 {
+  position: absolute;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #fff;
+  bottom: 0;
+  transform: translateX(180px);
+}
+.card-book:hover .box {
+  transform: rotateY(-135deg);
+  cursor: pointer;
+}
+.card-book .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: -1;
+}
+.title-heading {
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 3em;
+  text-align: center; 
+}
+.card{
+  margin-top: 1.5em;
+}
+.page-footer {
+    background-color: #222;
+    color: #CCC;
+    padding: 60px 0 30px;
+  margin-top: 50px;
+}
+.footer-copyright {
+    color: #666;
+    padding: 40px 0;
+}
+#socmed{
+  color:  #CCC;
+}
+#socmed:hover{
+  color:  #666;
+}
